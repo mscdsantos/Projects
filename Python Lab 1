@@ -1,5 +1,4 @@
-# Question 1: Writing a program that reads a celsius degree from the console amd
-converts it to Fahrenheit
+# Question 1: Writing a program that reads a celsius degree from the console and converts it to Fahrenheit
 # and displays the result.
 celsius = float(input("Enter a degree in Celsius: "))
 #defining celsius
