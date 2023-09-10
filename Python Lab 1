@@ -1,0 +1,54 @@
+# Question 1: Writing a program that reads a celsius degree from the console amd
+converts it to Fahrenheit
+# and displays the result.
+celsius = float(input("Enter a degree in Celsius: "))
+#defining celsius
+fahrenheit = (9 / 5)* celsius + 32
+#formula for celsius conversion into fahrenheit
+print(celsius, "Celsius", "is", fahrenheit, "Fahrenheit")
+
+
+# Question 2: Write program that reads in an investment amount, annual interest
+rate, and the number of
+# years, displays the future investment value using the following formula
+investmentAmount = float(input("Enter investment amount: "))
+#entering float for investment amount
+annualInterestRate = float(input("Enter annual interest rate: "))
+#entering annual interest rate amount
+monthlyInterestRate = annualInterestRate / 1200
+#converting annual interest rate to monthly
+numberOfYears = int(input("Enter number of years: "))
+#entering number of years
+numberOfMonths = (numberOfYears * 12)
+#converting year to months
+futureInvestmentValue = investmentAmount * (1 + monthlyInterestRate) **
+numberOfMonths #this is the formula to compute investment value
+print("Accumulated value is", futureInvestmentValue)
+
+
+#Question 3: Write a program that reads an integer between 0 and 1000 and adds all
+the digits in the int
+x = int(input("Enter a number between 0 and 1000: "))
+a = eval("x % 100")
+#extracts 10ths & 1s digit
+b = eval("x // 100")
+#extracts 100th digit if there is one
+c = eval("x % 10")
+#extracts 1s digit
+d = eval("a // 10")
+#extracts 10ths digit from a
+print("The sum of the digits is", b + c + d)
+#Question 4: Write a program that prompts the user to enter weight in pounds and
+height in inches
+#displaying bmi
+pound = float(input("Enter weight in pounds: "))
+#asks user to input weight in lbs
+inch = float(input("Enter height in inches: "))
+#asks user to input height in inches
+kilograms = (0.45359237 * pound)
+#converts pounds to kilograms
+meters = (0.0254 * inch)
+#converts inches to meters
+BMI = kilograms / (meters**2)
+#calculates BMI
+print("BMI is", BMI)
