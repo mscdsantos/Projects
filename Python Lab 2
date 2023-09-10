@@ -1,0 +1,37 @@
+#Description: Write a program asking to input the following information
+#and print their payroll information
+
+name = input("Enter employee's name: ")
+#Ask user to input name
+hoursworked = float(input("Enter number of hours worked in a week: "))
+#ask user to input the number of hours worked in a week
+hourlypay = float(input("Enter hourly pay rate: "))
+#ask user to input hourly pay rate
+federaltax = float(input("Enter federal tax withholding rate: "))
+#ask user to input federal tax withholding % rate
+statetax = float(input("Enter state tax withholding rate: "))
+#ask user to input state tax withholding % rate
+grosspay = hoursworked * hourlypay
+#calculates gross pay by multiplying hours worked & hourlypay
+federalwithholding = federaltax * grosspay
+#calculates federal withholding dollar amount
+statewithholding = statetax * grosspay
+#calculates state withholding dollar amount
+totaldeduction = federalwithholding + statewithholding
+#calculates total deduction by combining dollar amount of state/tax withholding
+statepercent = statetax*100
+#converts state percent into number
+federalpercent = federaltax*100
+#converts federal percent into number
+netpay = grosspay - totaldeduction
+#calculates net pay by subtracting gross pay by total deduction
+#the following commands print all the calculations made
+print("\nEmployee Name:",name)
+print("Hours Worked:",hoursworked)
+print("Pay Rate: $",hourlypay)
+print("Gross Pay: $",grosspay)
+print("Deductions:")
+print(" Federal withholding(",federalpercent,"%):$",federalwithholding)
+print(" State Withholding(",statepercent,"%):$",statewithholding)
+print(" Total Deduction: $",totaldeduction)
+print("Net Pay: $",netpay)
