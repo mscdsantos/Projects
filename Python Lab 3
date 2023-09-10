@@ -1,0 +1,36 @@
+# Description: write a program that reads an unspecified number of integers
+# determines how many positive and negative values have been read,
+# computes the total and average of the input values (not countint zeros)
+# program ends with the input 0. Display the average as a float
+pcounter = 0
+ncounter = 0
+#set counters to count the positive and negative integer numbers
+sum = 0
+x = int(input("Enter an integer, the input ends if it is 0: "))
+# ask user to input integer
+while x != 0:
+#while x does not equal 0, set the following conditions
+if x > 0:
+pcounter += 1
+sum += x
+x = int(input("Enter an integer, the input ends if it is 0: "))
+#if x is a positive integer add 1 to positive integer counter
+#and ask user to input number again
+#also adds x to a total number that is added on the side
+if x < 0:
+ncounter += 1
+sum += x
+x = int(input("Enter an integer, the input ends if it is 0: "))
+#if x is a negative integer add 1 to negative integer counter
+#and ask user to input number again
+##also adds x to a total number that is added on the side
+if pcounter == 0 and ncounter == 0:
+print("You didn't enter any number")
+#if both counters are 0 when entering 0, that means the user didn't
+#input a number and put 0 from the get go
+else:
+print("The number of positives is", pcounter)
+print("The number of negatives is", ncounter)
+print("The total is", sum)
+print("The average is",float((sum)/(pcounter + ncounter)))
+#if it fails the no number input condition, print the following values
