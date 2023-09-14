@@ -1,0 +1,27 @@
+# Code to create a calculator which dynamically detects simple arithmetic and provdes the answer
+# Creating a function to dynamically detect the simple formulas and throw out errors if user input something incorrectly
+def calculate_formula(formula):
+    try:
+        # using eval to calculate the formula
+        result = eval(formula)
+        return result
+    except ZeroDivisionError:
+        return "Cannot divide by zero"
+    except Exception as e:
+        return f"An error occurred: {e}"
+
+# Loop to continue calculations unless user quits
+while True:
+    formula = input("Enter a formula or type 'quit' to exit: ")
+
+    if formula.lower() == 'quit':
+        print("Goodbye! :)")
+        break
+    
+    result = calculate_formula(formula)
+    print("Result:", result)
+
+    question = input("Would you like to do another calculation? (yes/no): ")
+    if question.lower() != 'yes':
+        print("Goodbye! :)")
+        break
